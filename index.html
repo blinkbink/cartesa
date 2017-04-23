@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-<title>Personal Page</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--webfont-->
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-				});
-			});
-		</script>
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Infinity</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=0">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">  
+   <link rel="stylesheet" href="css/main.css">  
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 	<!--Start of Zendesk Chat Script-->
 	<script type="text/javascript">
@@ -33,88 +42,73 @@
 	<!--End of Zendesk Chat Script-->
 
 </head>
-<body>
- <!-- header-section-starts -->
-    <div class="header">
-		<div class="header-banner">
-			<div class="container">
-				<div class="top-menu">
-				    <span class="menu"> </span>
-					    <ul>
-							<div class="clearfix"></div>
-						</ul>
-				    </div>
-		 <!--script-nav-->
-		 <script>
-		 $("span.menu").click(function(){
-		 $(".top-menu ul").slideToggle("slow" , function(){
-		 });
-		 });
-		 </script>
-				<div class="header-banner-info text-center">
-					<h3>Welcome</h3>
-					<span class="line"></span>
-					<label></label>
 
-					<ul class="details">
-						<li>Add me on <a href="https://steamcommunity.com/id/iqbalc09">Steam</a></li>
-						<li>Email : <a href="#">asassins@y7mail.com</a></li>
-					</ul>
+<body id="top">
+	<!-- header 
+   ================================================== -->
+   <header>
+		<a id="header-menu-trigger" href="#0">
+		 	<span class="header-menu-text">Menu</span>
+		  	<span class="header-menu-icon"></span>
+		</a> 
 
-				</div>
-			</div>
-		</div>
-	</div>
-    <!-- header-section-ends -->
-    <!-- content-section-starts -->
-    <div class="content-section">
-					<script type="text/javascript">
-			$(window).load(function() {
-				$("#flexiselDemo3").flexisel({
-					visibleItems: 1,
-					animationSpeed: 1000,
-					autoPlay: false,
-					autoPlaySpeed: 3000,    		
-					pauseOnHover: true,
-					enableResponsiveBreakpoints: true,
-			    	responsiveBreakpoints: { 
-			    		portrait: { 
-			    			changePoint:480,
-			    			visibleItems: 1
-			    		}, 
-			    		landscape: { 
-			    			changePoint:640,
-			    			visibleItems: 1
-			    		},
-			    		tablet: { 
-			    			changePoint:768,
-			    			visibleItems: 1
-			    		}
-			    	}
-			    });
-			    
-			});
-		</script>
-		<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
+		<nav id="menu-nav-wrap">
+			<a href="#0" class="close-button" title="close"><span>Close</span></a>
+	   	<h3>Menu</h3>
+			<ul class="nav-list">
+				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
+				<li><a class="smoothscroll" href="#about" title="">About</a></li>
+				<li><a class="smoothscroll" href="#services" title="">Services</a></li>
+				<li><a class="smoothscroll" href="#portfolio" title="">Works</a></li>
+				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>						
+			</ul>	
 
+			<ul class="header-social-list">
+	         <li>
+	         	<a href="http://www.facebook.com/iqbalc09"><i class="fa fa-facebook-square"></i></a>
+	         </li>
+	         <li>
+	         	<a href="https://www.instagram.com/iqbalc09"><i class="fa fa-instagram"></i></a>
+	         </li>
+			<li>
+				<a href="https://steamcommunity.com/id/iqbalc09"><i class="fa fa-steam"></i></a>
+			</li>
+	      </ul>		
 
+		</nav>  <!-- end #menu-nav-wrap -->
 
-				  <script type="text/javascript">
-						$(document).ready(function() {
-							/*
-							var defaults = {
-					  			containerID: 'toTop', // fading element id
-								containerHoverID: 'toTopHover', // fading element hover id
-								scrollSpeed: 1200,
-								easingType: 'linear' 
-					 		};
-							*/
-							
-							$().UItoTop({ easingType: 'easeOutQuart' });
-							
-						});
-					</script>
-				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</header> <!-- end header -->  
+
+   <!-- home
+   ================================================== -->
+   <section id="home">
+
+   	<div class="overlay"></div>
+
+   	<div class="home-content-table">	
+		   <div class="home-content-tablecell">
+		   	<div class="row">
+		   		<div class="col-twelve">
+			  				<h3 class="animate-intro">Welcome</h3>
+				  			<div class="more animate-intro">
+				  			</div>
+			  		</div> <!-- end col-twelve --> 
+		   	</div> <!-- end row --> 
+		   </div> <!-- end home-content-tablecell --> 		   
+		</div> <!-- end home-content-table -->
+
+   </section> <!-- end home -->
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
 
 </body>
+
 </html>
