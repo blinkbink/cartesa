@@ -2264,7 +2264,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  *
  * ------------------------------------------------------------------- */
 #testimonials {
-  background: #FFFFFF;
+  background: whitesmoke;
   padding: 12rem 0 7.8rem;
   text-align: center;
 }
@@ -2378,54 +2378,6 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  * responsive:
  * testimonials
  * ------------------------------------------------------------------- */
-@media only screen and (max-width: 1024px) {
-  #testimonial-slider p {
-    font-size: 2.8rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  #testimonials h2 {
-    font-size: 1.7rem;
-  }
-
-  #testimonial-slider p {
-    font-size: 2.5rem;
-  }
-  #testimonial-slider .testimonial-author img {
-    width: 6.6rem;
-    height: 6.6rem;
-  }
-  #testimonial-slider .testimonial-author .author-info {
-    font-size: 1.8rem;
-  }
-  #testimonial-slider .testimonial-author .author-info span {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (max-width: 600px) {
-  #testimonials .flex-container {
-    width: 90%;
-  }
-
-  #testimonial-slider p {
-    font-size: 2.2rem;
-  }
-}
-@media only screen and (max-width: 500px) {
-  #testimonials h2 {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (max-width: 400px) {
-  #testimonials .flex-container {
-    width: 100%;
-  }
-
-  #testimonial-slider p {
-    font-size: 2rem;
-  }
-}
-
 
 /* ===================================================================
  *  15. clients - (_layout.scss)
@@ -2992,4 +2944,202 @@ footer h4.h05::after {
   .footer-bottom .copyright span::after {
     display: none;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  #testimonial-slider p {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #testimonials h2 {
+    font-size: 1.7rem;
+  }
+
+  #testimonial-slider p {
+    font-size: 2.5rem;
+  }
+  #testimonial-slider .testimonial-author img {
+    width: 6.6rem;
+    height: 6.6rem;
+  }
+  #testimonial-slider .testimonial-author .author-info {
+    font-size: 1.8rem;
+  }
+  #testimonial-slider .testimonial-author .author-info span {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #testimonials .flex-container {
+    width: 90%;
+  }
+
+  #testimonial-slider p {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #testimonials h2 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #testimonials .flex-container {
+    width: 100%;
+  }
+
+  #testimonial-slider p {
+    font-size: 2rem;
+  }
+}
+
+
+/* Clearing floats */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main level */
+.menu {
+  margin: 50px auto;
+  width: 800px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+.menu > li {
+  background: lightslategray;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}
+
+.menu li:hover {
+  background: cornflowerblue;
+}
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;
+}
+
+.submenu > li > a {
+  padding: 1em 2em;
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+}
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);
 }
